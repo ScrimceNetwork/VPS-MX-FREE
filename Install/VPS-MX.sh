@@ -413,4 +413,4 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "Code de KEY Inva
 else
 invalid_key
 fi
-rm -rf VPS-MX
+rm -rf VPS-MX 
