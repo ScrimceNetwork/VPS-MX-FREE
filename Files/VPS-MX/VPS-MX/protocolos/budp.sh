@@ -11,23 +11,23 @@ pid_badvpn=$(ps x | grep badvpn | grep -v grep | awk '{print $1}')
 if [ "$pid_badvpn" = "" ]; then
 msg -bar 
 msg -tit
-    msg -ama "            BADVPN ACTIVATOR (UDP 7300)"
+    msg -ama "            ACTIVADOR DE BADVPN (UDP 7300)"
     msg -bar 
     if [[ ! -e /bin/badvpn-udpgw ]]; then
-    wget -O /bin/badvpn-udpgw https://raw.githubusercontent.com/rukshanchamindu/VPS-MX-ENGLISH/main/Files/badvpn-udpgw &>/dev/null
+    wget -O /bin/badvpn-udpgw https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/badvpn-udpgw &>/dev/null
     chmod 777 /bin/badvpn-udpgw
     fi
     screen -dmS badvpn2 /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10 
-    [[ "$(ps x | grep badvpn | grep -v grep | awk '{print $1}')" ]] && msg -verd "                  ACTIVATED SUCCESSFULLY" || msg -ama "                 Fallo"
+    [[ "$(ps x | grep badvpn | grep -v grep | awk '{print $1}')" ]] && msg -verd "                  ACTIVADO CON EXITO" || msg -ama "                 Fallo"
 	msg -bar
 else
     msg -bar 
 	msg -tit
-    msg -ama "          BADVPN DEACTIVATOR (UDP 7300)"
+    msg -ama "          DESACTIVADOR DE BADVPN (UDP 7300)"
     msg -bar
     kill -9 $(ps x | grep badvpn | grep -v grep | awk '{print $1'}) > /dev/null 2>&1
     killall badvpn-udpgw > /dev/null 2>&1
-    [[ ! "$(ps x | grep badvpn | grep -v grep | awk '{print $1}')" ]] && msg -ne "                DEACTIVATED SUCCESSFULLY \n"
+    [[ ! "$(ps x | grep badvpn | grep -v grep | awk '{print $1}')" ]] && msg -ne "                DESACTIVADO CON EXITO \n"
     unset pid_badvpn
 	msg -bar
     fi
