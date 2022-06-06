@@ -41,19 +41,19 @@ sleep 1s
 }
 ssl_stunel () {
 [[ $(mportas|grep stunnel4|head -1) ]] && {
-echo -e "\033[1;33m $(fun_trans  "stopping stunnel")"
+echo -e "\033[1;33m $(fun_trans  "Deteniendo Stunnel")"
 msg -bar
 service stunnel4 stop > /dev/null 2>&1
 fun_bar "apt-get purge  stunnel4 -y"
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "Stopped Successfully!")"
+echo -e "\033[1;33m $(fun_trans  "Detenido Con Exito!")"
 msg -bar
 return 0
 }
-echo -e "\033[1;32m $(fun_trans  "              INSTALLER SSL By VPS-MX")"
+echo -e "\033[1;32m $(fun_trans  "              INSTALADOR SSL By VPS-MX")"
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "Select an internal redirect port (eg:- 22.)")"
-echo -e "\033[1;33m $(fun_trans  "A port SSH/DROPBEAR/SQUID/OPENVPN/SSL")"
+echo -e "\033[1;33m $(fun_trans  "Seleccione una puerta de redirección interna.")"
+echo -e "\033[1;33m $(fun_trans  "Un puerto SSH/DROPBEAR/SQUID/OPENVPN/SSL")"
 msg -bar
          while true; do
          echo -e "\033[1;37m"
@@ -61,24 +61,24 @@ msg -bar
 		 echo ""
          if [[ ! -z $portx ]]; then
              if [[ $(echo $portx|grep [0-9]) ]]; then
-                [[ $(mportas|grep $portx|head -1) ]] && break || echo -e "\033[1;31m invalid port"
+                [[ $(mportas|grep $portx|head -1) ]] && break || echo -e "\033[1;31m Puerto Invalido"
              fi
          fi
          done
 msg -bar
 DPORT="$(mportas|grep $portx|awk '{print $2}'|head -1)"
-echo -e "\033[1;33m   Now what port will be SSL"
+echo -e "\033[1;33m   Ahora Que Puerto sera SSL"
 msg -bar
     while true; do
 	echo -e "\033[1;37m"
     read -p " Listen-SSL: " SSLPORT
 	echo ""
     [[ $(mportas|grep -w "$SSLPORT") ]] || break
-    echo -e "\033[1;33m This port is in use"
+    echo -e "\033[1;33m Este Puerto esta en Uso"
     unset SSLPORT
     done
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "installing SSL")"
+echo -e "\033[1;33m $(fun_trans  "Instalando SSL")"
 msg -bar
 fun_bar "apt-get install stunnel4 -y"
 apt-get install stunnel4 -y > /dev/null 2>&1
@@ -97,7 +97,7 @@ mv stunnel.pem /etc/stunnel/
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 service stunnel4 restart > /dev/null 2>&1
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "INSTALLED SUCCESSFULLY")"
+echo -e "\033[1;33m $(fun_trans  "INSTALADO CON EXITO")"
 msg -bar
 rm -rf /etc/ger-frm/stunnel.crt > /dev/null 2>&1
 rm -rf /etc/ger-frm/stunnel.key > /dev/null 2>&1
@@ -107,10 +107,10 @@ return 0
 }
 SPR &
 ssl_stunel_2 () {
-echo -e "\033[1;32m $(fun_trans  "             ADD MORE POSTS SSL")"
+echo -e "\033[1;32m $(fun_trans  "             AGREGAR MAS PUESRTOS SSL")"
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "Select an internal redirect port.")"
-echo -e "\033[1;33m $(fun_trans  "A port SSH/DROPBEAR/SQUID/OPENVPN/SSL")"
+echo -e "\033[1;33m $(fun_trans  "Seleccione una puerta de redirección interna.")"
+echo -e "\033[1;33m $(fun_trans  "Un puerto SSH/DROPBEAR/SQUID/OPENVPN/SSL")"
 msg -bar
          while true; do
          echo -ne "\033[1;37m"
@@ -118,24 +118,24 @@ msg -bar
 		 echo ""
          if [[ ! -z $portx ]]; then
              if [[ $(echo $portx|grep [0-9]) ]]; then
-                [[ $(mportas|grep $portx|head -1) ]] && break || echo -e "\033[1;31m $(fun_trans  "invalid port")"
+                [[ $(mportas|grep $portx|head -1) ]] && break || echo -e "\033[1;31m $(fun_trans  "Puerto Invalido")"
              fi
          fi
          done
 msg -bar
 DPORT="$(mportas|grep $portx|awk '{print $2}'|head -1)"
-echo -e "\033[1;33m $(fun_trans  "Now what port will be SSL")"
+echo -e "\033[1;33m $(fun_trans  "Ahora Que Puerto sera SSL")"
 msg -bar
     while true; do
 	echo -ne "\033[1;37m"
     read -p " Listen-SSL: " SSLPORT
 	echo ""
     [[ $(mportas|grep -w "$SSLPORT") ]] || break
-    echo -e "\033[1;33m $(fun_trans  "This port is in use")"
+    echo -e "\033[1;33m $(fun_trans  "Esta puerta está en uso")"
     unset SSLPORT
     done
 msg -bar
-echo -e "\033[1;33m $(fun_trans  "Installing SSL")"
+echo -e "\033[1;33m $(fun_trans  "Instalando SSL")"
 msg -bar
 fun_bar "apt-get install stunnel4 -y"
 echo -e "client = no\n[SSL+]\ncert = /etc/stunnel/stunnel.pem\naccept = ${SSLPORT}\nconnect = 127.0.0.1:${DPORT}" >> /etc/stunnel/stunnel.conf
@@ -143,7 +143,7 @@ echo -e "client = no\n[SSL+]\ncert = /etc/stunnel/stunnel.pem\naccept = ${SSLPOR
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 service stunnel4 restart > /dev/null 2>&1
 msg -bar
-echo -e "${cor[4]}            SUCCESSFULLY INSTALLED"
+echo -e "${cor[4]}            INSTALADO CON EXITO"
 msg -bar
 rm -rf /etc/ger-frm/stunnel.crt > /dev/null 2>&1
 rm -rf /etc/ger-frm/stunnel.key > /dev/null 2>&1
@@ -158,18 +158,18 @@ msg -bar
 msg -tit
 echo -e "\033[1;93m      SSL + PYDIREC  \033[1;94m By @AleSosaCreaciones "
 msg -bar
-echo -e "\033[1;91m ou must have port 22 SSH and free (80 y 443)"
+echo -e "\033[1;91m Deveras tener el Puerto 22 SSH y libre (80 y 443)"
 msg -bar
 
  install_python(){ 
- echo -e "\033[1;97m Activating Python Direc 80\n"
+ echo -e "\033[1;97m Activando Python Direc 80\n"
  fun_bar "apt-get install python -y" 
  sleep 3  
  screen -dmS pydic-80 python ${SCPinst}/python.py 80 "VPS-MX" && echo "80 VPS-MX" >> /etc/VPS-MX/PySSL.log
  msg -bar
  } 
  install_ssl(){  
- echo -e "\033[1;97m Enabling SSL Services 80 ► 443\n"
+ echo -e "\033[1;97m Activando Servicios SSL 80 ► 443\n"
  fun_bar "apt-get install stunnel4 -y" 
  apt-get install stunnel4 -y > /dev/null 2>&1 
  echo -e "client = no\n[SSL]\ncert = /etc/stunnel/stunnel.pem\naccept = 443\nconnect = 127.0.0.1:80" > /etc/stunnel/stunnel.conf 
@@ -187,7 +187,7 @@ msg -bar
 install_python 
 install_ssl 
 msg -bar
-echo -e "${cor[4]}               COMPLETE INSTALLATION"
+echo -e "${cor[4]}               INSTALACION COMPLETA"
 msg -bar
 }
 clear
@@ -195,17 +195,17 @@ clear
 msg -bar
 msg -bar3
 msg -tit
-echo -e "${cor[3]}       MONO AND MULTI SSL INSTALLER By @Kalix1"
+echo -e "${cor[3]}       INSTALADOR MONO Y MULTI SSL By @Kalix1"
 msg -bar
-echo -e "${cor[1]}            Choose the desired option."
+echo -e "${cor[1]}            Escoja la opcion deseada."
 msg -bar
-echo -e "${cor[4]} 1).-\033[1;37m START | STOP SSL "
-echo -e "${cor[4]} 2).-\033[1;37m ADD SSL PORTS   "
+echo -e "${cor[4]} 1).-\033[1;37m INICIAR | PARAR SSL "
+echo -e "${cor[4]} 2).-\033[1;37m AGREGAR PUERTOS SSL   "
 msg -bar
 echo -e "${cor[4]} 3).-\033[1;37m SSL+PYDIREC (AUTO CONFIGURACION)   "
 echo -ne ""$(msg -bar)"   \n$(msg -verd " 0).-") $(msg -verm2 "==>")" &&  msg -bra  "  \e[97m\033[1;41m VOLVER \033[1;37m"
 msg -bar
-echo -ne "\033[1;37mEnter only the number according to your answer: "
+echo -ne "\033[1;37mDigite solo el numero segun su respuesta: "
 
 
 read opcao
@@ -221,7 +221,7 @@ ssl_stunel_2
 3)
 msg -bar
 ssl_stunel_3
-msg -ne "Enter To Continue" && read enter
+msg -ne "Enter Para Continuar" && read enter
 /etc/VPS-MX/protocolos/ssl.sh
 ;;
 4)
