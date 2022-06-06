@@ -126,7 +126,7 @@ fun_trans() {
 }
 function_verify() {
 
-   v1=$(curl -sSL "https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Version")
+   v1=$(curl -sSL "https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/Version")
    echo "$v1" >/etc/versin_script
 }
 atualiza_fun() {
