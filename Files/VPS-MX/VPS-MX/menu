@@ -563,7 +563,7 @@ ferramentas_fun() {
    echo -e "\033[1;93m-----------------------SEGURIDAD---------------------"
    #PROTECION
    let Numb++
-   echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FIREWALL PARA VPS VPS•MX            $ofc"
+   echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FIREWALL PARA VPS VPS-MX            $ofc"
    script[$Numb]="blockBT.sh"
    let Numb++
    echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FAIL2BAN PROTECION                  $ofc"
