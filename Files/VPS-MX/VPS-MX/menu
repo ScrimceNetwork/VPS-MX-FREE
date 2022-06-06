@@ -602,7 +602,7 @@ clear
 tput cuu1 && tput dl1
 msg -bar2
 msg -tit
-msg -ama "                 MENU DE HERRAMIENTAS"
+msg -ama "                 TOOL MENU"
 msg -bar2
 local Numb=1
 for arqs in $(ls ${SCPfrm}); do
@@ -611,60 +611,60 @@ float_data "$arqs" "$Numb" && {
   let Numb++
   }
 done
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "ADMINISTRAR MEDIANTE BOT DE TELEGRAM  $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "MANAGE VIA TELEGRAM BOT  $ofc"
 script[$Numb]="ADMbot.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "NOTIFICACIONES NOTY-BOT               $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "NOTY-BOT NOTIFICATIONS           $ofc"
 script[$Numb]="NotyBOT.py"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "COMPARTIR ARCHIVO ONLINE              $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "ONLINE FILE SHARE           $ofc"
 script[$Numb]="apacheon.sh"
-echo -e "\033[1;93m-----------------------SEGURIDAD---------------------"
+echo -e "\033[1;93m-----------------------SECURITY---------------------"
 #PROTECION
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FIREWALL PARA VPS VPS•MX              $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FIREWALL FOR VPS VPS•MX            $ofc"
 script[$Numb]="blockBT.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FAIL2BAN PROTECION                    $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "FAIL2BAN PROTECTION                  $ofc"
 script[$Numb]="fai2ban.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "AUTENTIFICAR PROXY SQUID              $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "AUTHENTICATE PROXY SQUID           $ofc"
 script[$Numb]="squidpass.sh"
-echo -e "\033[1;93m--------------------AJUSTES INTERNOS-----------------"
+echo -e "\033[1;93m--------------------INTERNAL ADJUSTMENTS-----------------"
 #AJUSTES INTERNOS
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "TCP ACELERACION (BBR/PLUS)            $dev"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "TCP ACELERACION (BBR/PLUS)          $dev"
 script[$Numb]="tcp.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "AGREGAR DNS NETFLIX By @USA1_BOT      $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "ADD DNS NETFLIX By @USA1_BOT    $ofc"
 script[$Numb]="dns-netflix.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "ADMINISTRAR PUERTOS ACTIVOS           $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "MANAGE ACTIVE PORTS         $ofc"
 script[$Numb]="ports.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "Pass Root/Add root/Horario/etc..      $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "Pass Root/Add root/Horario/etc..   $ofc"
 script[$Numb]="gestor.sh"
 #OPTIMIZADORES
-echo -e "\033[1;93m-----------------------OPTIMIZADORES------------------"
+echo -e "\033[1;93m---------------------OPTIMIZERS-------------------"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "Limpiar/Cache/Ram/Librarias/etc..     $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "Clean/Cache/Ram/Libraries/etc..  $ofc"
 script[$Numb]="utils.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "DETALLES DE SISTEMA                   $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "SYSTEM DETAILS                $ofc"
 script[$Numb]="systeminf"
 #EXTRAS
-echo -e "\033[1;93m--------------------------EXTRAS----------------------"
+echo -e "\033[1;93m-------------------------EXTRAS----------------------"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "PAYLOAD FUERZA BRUTA                  $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "PAYLOAD BRUTE FORCE             $ofc"
 script[$Numb]="paysnd.sh"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "SCANNER DE SUBDOMINIO                 $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "SUBDOMAIN SCANNER             $ofc"
 script[$Numb]="ultrahost"
 let Numb++
-echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "PRUEBA DE VELOCIDAD                   $ofc"
+echo -ne "$(msg -verd "[$Numb]") $(msg -verm2 ">") " && msg -azu "SPEED TEST               $ofc"
 script[$Numb]="speed.py"
 echo -ne "$(msg -bar2)\n$(msg -verd "[0]") $(msg -verm2 ">") " && msg -bra "\e[97m\033[1;41m RETURN \033[1;37m"
-script[0]="VOLVER"
+script[0]="voltar"
 msg -bar2
 selection=$(selection_fun $Numb)
 [[ -e "${SCPfrm}/${script[$selection]}" ]] && {
@@ -714,7 +714,7 @@ done
 msg -bar
 echo -ne "$(msg -verd " [0]") $(msg -verm2 "==>>") " && msg -bra "$menuTXT"
 msg -bar
-script[0]="VOLVER"
+script[0]="voltar"
 selection=999
 selection=$(selection_fun $Numb)
 [[ -e "${SCPinst}/${script[$selection]}" ]] && {
@@ -972,13 +972,13 @@ msg -bar
 }
 msg -bar
 msg -bar3
-menu_func "ADMINISTRAR CUENTA | SSH/SSL/DROPBEAR" "ADMINISTRAR CUENTA | SS/SSRR" "ADMINISTRAR CUENTA | V2RAY"   "\033[1;100mINSTALADORES DE PROTOCOLOS" "PUERTOS ACTIVOS" "HERRAMIENTAS Y EXTRAS" "CAMBIAR COLORES DEL PANEL" "MONITOR DE PROTOCOLOS --------> ${monitorservi}" " AUTO INICIAR SCRIPT ----------> $AutoRun " 
+menu_func "MANAGE ACCOUNTS | SSH/SSL/DROPBEAR" "MANAGE ACCOUNTS | SS/SSRR" "MANAGE ACCOUNTS | V2RAY"   "\033[1;100mPROTOCOL INSTALLERS" "ACTIVE PORTS" "TOOLS and EXTRAS" "CHANGE PANEL COLORS" "PROTOCOL MONITOR --------> ${monitorservi}" " AUTO START SCRIPT ----------> $AutoRun " 
 msg -bar
-echo -ne " $(msg -verd " [10]") $(msg -verm2 "=>>") \e[36m MONITOR DE PROCESOS DE SISTEMA CON HTOP \e[97m \n"
+echo -ne " $(msg -verd " [10]") $(msg -verm2 "=>>") \e[36m SYSTEM PROCESS MONITOR WITH HTOP \e[97m \n"
 msg -bar
-echo -ne " \e[93m [11] \e[97m $(msg -verm2 "=>>") $(msg -verd "Do not use ") " && echo -ne "\e[93m [12] \e[97m $(msg -verm2 "=>>") "&& msg -bra "\033[1;31m DESINSTALAR "
+echo -ne " \e[93m [11] \e[97m $(msg -verm2 "=>>") $(msg -verd "Do not use ") " && echo -ne "\e[93m [12] \e[97m $(msg -verm2 "=>>") "&& msg -bra "\033[1;31m UNINSTALL "
 msg -bar
-echo -ne "$(msg -verd "  [13]") $(msg -verm2 "=>>") " && echo -ne "\033[1;97mCREDITOS" && echo -ne "$(msg -verd " [0]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;41m ❗️ SALIR DEL SCRIPT ❗️ "
+echo -ne "$(msg -verd "  [13]") $(msg -verm2 "=>>") " && echo -ne "\033[1;97mCREDITS" && echo -ne "$(msg -verd " [0]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;41m ❗️ EXIT SCRIPT ❗️ "
 msg -bar
 selection=$(selection_fun 13)
 case ${selection} in
@@ -997,5 +997,5 @@ case ${selection} in
 13)creditoss ;;
 0)cd $HOME && exit 0;;
 esac
-msg -ne "Enter para Continuar" && read enter
+msg -ne "Enter To Continue" && read enter
 ${SCPdir}/menu
