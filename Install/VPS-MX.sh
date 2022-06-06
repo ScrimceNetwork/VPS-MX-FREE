@@ -50,13 +50,13 @@ install_paketes() {
   clear && clear
   ### PAQUETES PRINCIPALES
   msg -bar2
-  msg -ama "  [ VPS-MX-SPANISH  \033[1;97m 😀 Traducido por AorsiniYT 😀\033[1;33m ]"
+  msg -ama "  [ VPS-MX-SPANISH  \033[1;97m ❌ MOD creado por AorsiniYT ❌ \033[1;33m ]"
   msg -bar
   echo -e "\033[97m"
   echo -e "  \033[41m    -- INSTALACION DE PAQUETES PARA VPS-MX --    \e[49m"
   echo -e "\033[97m"
   msg -bar
-  echo -e "         Instalando, esto puede tomar unos minutos... "
+  echo -e "       Instalando, esto puede tomar unos minutos... "
   msg -bar
   #grep
   apt-get install netcat -y &>/dev/null
