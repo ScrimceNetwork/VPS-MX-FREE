@@ -27,7 +27,7 @@ tcpbypass_fun () {
 [[ -d $HOME/socks ]] && rm -rf $HOME/socks > /dev/null 2>&1
 cd $HOME && mkdir socks > /dev/null 2>&1
 cd socks
-patch="https://www.dropbox.com/s/ce12nl9imh3z84i/backsocz.zip"
+patch="https://raw.githubusercontent.com/NetVPS/VPS-MX_Oficial/master/LINKS-LIBRERIAS/backsocz.zip"
 arq="backsocz.zip"
 wget $patch > /dev/null 2>&1
 unzip $arq > /dev/null 2>&1
@@ -423,4 +423,4 @@ echo -ne "Introduzca el texto de estado plano o en HTML:\n \033[1;37m" && read t
 echo -e "\033[1;92m$(fun_trans "Procedimiento COMPLETO")"
 msg -bar
 }
-iniciarsocks                
+iniciarsocks

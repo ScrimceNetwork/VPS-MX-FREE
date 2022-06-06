@@ -82,7 +82,7 @@ echo -e "\033[1;33m $(fun_trans  "Instalando SSL")"
 msg -bar
 fun_bar "apt-get install stunnel4 -y"
 apt-get install stunnel4 -y > /dev/null 2>&1
-echo -e "client = no\n[SSL]\ncert = /etc/stunnel/stunnel.pem\naccept = ${SSLPORT}\nconnect = 127.0.0.1:${DPORT}" > /etc/stunnel/stunnel.conf
+echo -e "client = no\n[SSL]\ncert = /etc/stunnel/stunnel.pem\naccept = ${SSLPORT}\nconnect = 127.0.0.1:${portx}" > /etc/stunnel/stunnel.conf
 ####Coreccion2.0##### 
 openssl genrsa -out stunnel.key 2048 > /dev/null 2>&1
 
