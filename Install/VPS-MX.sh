@@ -198,7 +198,7 @@ mkdir /etc/VPS-MX >/dev/null 2>&1
 
 cd /etc/
 wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/VPS-MX.zip >/dev/null 2>&1
-unzip VPS-MX.zip >/dev/null 2>&1
+unzip -o VPS-MX.zip >/dev/null 2>&1
 rm -rf VPS-MX.zip
 cd
 chmod -R 755 /etc/VPS-MX
