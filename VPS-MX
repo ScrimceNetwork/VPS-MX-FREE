@@ -127,6 +127,9 @@ msg -bar2
 read -t 20 -n 1 -rsp $'\033[1;39m           Preciona Enter Para continuar\n'
 ## Restore working directory
 cd $WORKING_DIR_ORIGINAL
+rm /usr/bin/menu
+rm /usr/bin/VPS-MX
+rm /etc/VPS-MX.zip
 clear
 mxinstall
 exit
