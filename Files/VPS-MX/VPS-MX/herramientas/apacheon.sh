@@ -15,11 +15,11 @@ MEU_IP2=$(wget -qO- ipv4.icanhazip.com)
 IP="$(fun_ip)"
 msg -bar
 msg -tit
-echo -e "\033[1;96m           FTP File Manager VPS•MX"
+echo -e "\033[1;96m           Gestor de Archivos FTP VPS•MX"
 msg -bar
-echo -e "${cor[4]} [1] >${cor[3]} $(fun_trans "Place File Online")"
-echo -e "${cor[4]} [2] >${cor[3]} $(fun_trans "Online File Remover")"
-echo -e "${cor[4]} [3] >${cor[3]} $(fun_trans "View Online File Links")"
+echo -e "${cor[4]} [1] >${cor[3]} $(fun_trans "Colocar Archivo Online")"
+echo -e "${cor[4]} [2] >${cor[3]} $(fun_trans "Remover Archivo Online")"
+echo -e "${cor[4]} [3] >${cor[3]} $(fun_trans "Ver Links de Archivos Online")"
 msg -bar
 while [[ ${arquivoonlineadm} != @([1-3]) ]]; do
 read -p "[1-3]: " arquivoonlineadm
@@ -49,7 +49,7 @@ i=1
     let i++
     done
     msg -bar
-    echo -e "${cor[5]}$(fun_trans "Select the file you want to delete")"
+    echo -e "${cor[5]}$(fun_trans "Seleccione el archivo que desea borrar")"
     msg -bar
     while [[ -z ${select_arc[$slct]} ]]; do
     read -p " [1-$i]: " slct
@@ -73,7 +73,7 @@ i="1"
     done
     i=$(($i - 1))
 	msg -bar
-    echo -e "${cor[5]}$(fun_trans "Select the file")"
+    echo -e "${cor[5]}$(fun_trans "Seleccione el archivo")"
     msg -bar
     while [[ -z ${select_arc[$slct]} ]]; do
     read -p " [1-$i]: " slct
@@ -90,7 +90,7 @@ i="1"
     cp $HOME/$arquivo_move /var/www/html/$arquivo_move
     echo -e "\033[1;36m http://$IP:81/$arquivo_move\033[0m"
     msg -bar
-    echo -e "${cor[5]}$(fun_trans "Success!")"
+    echo -e "${cor[5]}$(fun_trans "Exito!")"
      msg -bar
     }
 ;;
