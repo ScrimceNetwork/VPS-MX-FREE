@@ -1,4 +1,4 @@
-﻿# VPS-MX By Kalix1 ( MOD NEW-ULTIMATE )
+﻿# VPS-MX MOD by Aorsini
 ```
 * UPDATE 24/11/2021
 ```
@@ -19,16 +19,16 @@
 
 ## :book: Installation
 
-apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
+VPS-MX (las dependencias faltantes se instalarán automáticamente)
 
 ```
-VPS-MX (las dependencias faltantes se instalarán automáticamente)
+apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
 ```
 -------------------------------------------------------------------------------
 
 ## :scroll: Changelog
 
-**VERSION: 8.4e**
+**VERSION: 8.4a MOD**
 
 https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Version
 
