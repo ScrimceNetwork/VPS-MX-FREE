@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Version
 1. [@Kalix1 - Developer of VPS-MX](https://github.com/VPS-MX)
 2. [@Rufu99 - Contributor](https://github.com/rudi9999)
 3. [Casita Dev Team - Contributor](https://github.com/lacasitamx)
-4. [illuminati Dev Team - Contributor](https://github.com/AorsiniYT) 
+4. [@AorsiniYT](https://github.com/AorsiniYT) 
 
 ```
 ☆ https://t.me/AorsiniYT [  ⃘⃤꙰✰ ] ☆
