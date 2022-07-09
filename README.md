@@ -1,6 +1,6 @@
-﻿# VPS-MX MOD by Aorsini
+﻿# VPS-MX 8.6x MOD by Aorsini
 ```
-* UPDATE 24/11/2021
+* UPDATE 09/07/2022
 ```
 ![logo](https://github.com/AorsiniYT/VPS-MX-FREE/blob/main/Imagenes/VPS-MX-Free.png)
 
@@ -28,7 +28,7 @@ apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/ScrimceNet
 
 ## :scroll: Changelog
 
-**VERSION: 8.4a MOD**
+**VERSION: 8.6x MOD**
 
 https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Version
 
@@ -40,5 +40,5 @@ https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Version
 4. [@AorsiniYT](https://github.com/AorsiniYT) 
 
 ```
-☆ https://t.me/AorsiniYT [  ⃘⃤꙰✰ ] ☆
+☆ By Scrimce Network [  ⃘⃤꙰✰ ] ☆
 ```
