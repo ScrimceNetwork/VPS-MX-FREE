@@ -78,7 +78,7 @@ mkdir -p "/etc/vpsmxup/" &> /dev/null
 if [ ! -d "$INSTALL_DIR" ]; then
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
-    wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Install/zzupdate-master/zzupdate.default.conf -O /usr/local/vpsmxup/vpsmxup.default.conf  &> /dev/null
+    wget https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Install/zzupdate-master/zzupdate.default.conf -O /usr/local/vpsmxup/vpsmxup.default.conf  &> /dev/null
 else
 	echo ""
 fi
@@ -119,7 +119,7 @@ msg -bar
 echo -e "\033[97m      CONTRASEÑA AGREGADA O EDITADA CORECTAMENTE"
 echo -e "\033[97m SU CONTRASEÑA AHORA ES: \e[41m $pass \033[0;37m"
 rm /usr/bin/mxinstall
-wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Install/VPS-MX.sh -O /usr/bin/mxinstall &> /dev/null
+wget https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Install/VPS-MX.sh -O /usr/bin/mxinstall &> /dev/null
 chmod +x /usr/bin/mxinstall
 msg -bar2
 ## VPS-MX
