@@ -22,7 +22,7 @@
 VPS-MX (las dependencias faltantes se instalarán automáticamente)
 
 ```
-apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
+apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
 ```
 -------------------------------------------------------------------------------
 
