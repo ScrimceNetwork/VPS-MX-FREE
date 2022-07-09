@@ -50,7 +50,7 @@ install_paketes() {
   clear && clear
   ### PAQUETES PRINCIPALES
   msg -bar2
-  msg -ama "  [ VPS-MX-SPANISH  \033[1;97m ❌ MOD creado por AorsiniYT ❌ \033[1;33m ]"
+  msg -ama "  [ VPS-MX-SPANISH  \033[1;97m ❌ MOD creado por ScrimceNetwork ❌ \033[1;33m ]"
   msg -bar
   echo -e "\033[97m"
   echo -e "  \033[41m    -- INSTALACION DE PAQUETES PARA VPS-MX --    \e[49m"
@@ -197,7 +197,7 @@ install_paketes
 mkdir /etc/VPS-MX >/dev/null 2>&1
 
 cd /etc/
-wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/VPS-MX.zip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/VPS-MX.zip >/dev/null 2>&1
 unzip -o VPS-MX.zip >/dev/null 2>&1
 rm -rf VPS-MX.zip
 cd
@@ -221,7 +221,7 @@ echo "/etc/VPS-MX/menu" >/usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
 rm -rf /etc/VPS-MX/herramientas/speed.sh
 rm -rf /etc/VPS-MX/herramientas/speedtest.py
 cd /etc/VPS-MX/herramientas
-wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/speedtest_v1.tar >/dev/null 2>&1
+wget https://raw.githubusercontent.com/AorsiScrimceNetworkniYT/VPS-MX-FREE/main/Files/speedtest_v1.tar >/dev/null 2>&1
 tar -xf speedtest_v1.tar >/dev/null 2>&1
 rm -rf speedtest_v1.tar >/dev/null 2>&1
 cd
@@ -230,25 +230,25 @@ cd
 [[ ! -d /etc/VPS-MX/Slow/install ]] && mkdir /etc/VPS-MX/Slow/install
 [[ ! -d /etc/VPS-MX/Slow/Key ]] && mkdir /etc/VPS-MX/Slow/Key
 msg -ama "               Finishing Installation" && msg bar2
-[[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/AorsiniYT/VPS-MX-FREE/main/Files/nombre.log &>/dev/null
-[[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/AorsiniYT/VPS-MX-FREE/main/Files/IDT.log &>/dev/null
-[[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/AorsiniYT/VPS-MX-FREE/main/Files/tiemlim.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/ScrimceNetwork/VPS-MX-FREE/main/Files/nombre.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/ScrimceNetwork/VPS-MX-FREE/main/Files/IDT.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/ScrimceNetwork/VPS-MX-FREE/main/Files/tiemlim.log &>/dev/null
 touch /usr/share/lognull &>/dev/null
-wget https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
+wget https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
 chmod 775 /usr/bin/SPR &>/dev/null
-wget -O /usr/bin/SOPORTE https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/SOPORTE &>/dev/null
+wget -O /usr/bin/SOPORTE https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/SOPORTE &>/dev/null
 chmod 775 /usr/bin/SOPORTE &>/dev/null
 SOPORTE &>/dev/null
-wget -O /bin/rebootnb https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/rebootnb &>/dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/rebootnb &>/dev/null
 chmod +x /bin/rebootnb
-wget -O /bin/resetsshdrop https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/resetsshdrop &>/dev/null
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/resetsshdrop &>/dev/null
 chmod +x /bin/resetsshdrop
-wget -O /bin/monitor.sh https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/monitor.sh &> /dev/null
+wget -O /bin/monitor.sh https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/monitor.sh &> /dev/null
 chmod +x /bin/monitor.sh
-wget -O /etc/versin_script_new https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/Version &>/dev/null
+wget -O /etc/versin_script_new https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/Version &>/dev/null
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
-v1=$(curl -sSL "https://raw.githubusercontent.com/AorsiniYT/VPS-MX-FREE/main/Files/Version") 
+v1=$(curl -sSL "https://raw.githubusercontent.com/ScrimceNetwork/VPS-MX-FREE/main/Files/Version") 
 echo "$v1" > /etc/versin_script 
 msg -bar2
 echo '#!/bin/sh -e' >/etc/rc.local
