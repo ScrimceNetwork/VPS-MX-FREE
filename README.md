@@ -1,4 +1,4 @@
-﻿# VPS-MX 8.6x MOD by Aorsini
+﻿# VPS-MX 8.6x MOD by Scrimce Network
 ```
 * UPDATE 09/07/2022
 ```
